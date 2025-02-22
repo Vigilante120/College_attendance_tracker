@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}College Attendance System{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+<header class="bg-primary text-black text-center py-3">
+    <h1>College Attendance System 📅📍</h1>
+</div>
+</header>
+
+<div class="container mt-4">
+    {% block content %}{% endblock %}
+    <p class="lead">Welcome to the College Attendance System! This platform allows administrators to accurately record and view attendance. Attendance management is restricted to logged-in administrators only, ensuring the integrity and precision of the attendance records. No unauthorized tampering with records is possible.</p>
+
+</div>
+
+
+<div class="container overflow-hidden">
+
+    <div class="row gy-5">
+        <div class="col-6">
+            <div class="p-3 border bg-light">Take Attendance</div>
+        </div>
+        <div class="col-6">
+            <div class="p-3 border bg-light">View Students</div>
+        </div>
+        <div class="col-6">
+            <div class="p-3 border bg-light">View Teachers</div>
+        </div>
+        <div class="col-6">
+            <div class="p-3 border bg-light">View Attendance</div>
+        </div>
+
+    </div>
+</div>
+<div class="center-container">
+    <a class="btn btn-primary" href="{{ url_for('login') }}" role="button">Login</a>
+</div>
+
+
+<footer class="bg-dark text-white text-center py-3 mt-4">
+    <p>&copy; 2025 College Attendance System. All rights reserved.</p>
+    <p>Contact Us On</p>
+</footer>
+</body>
+</html>

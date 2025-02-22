@@ -1,0 +1,17 @@
+/* static/css/styles.css */
+body {
+    background-color: #e0f7fa;
+    color: #333;
+}
+
+header, footer {
+    background-color: #00796b; /* Darker teal color for header and footer */
+    color: #fff; /* White text for header and footer */
+}
+
+.center-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;    /* Center vertically */
+    height: 100vh;          /* Full viewport height */
+}

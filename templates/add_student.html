@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-4">
+    <h2>Add Student</h2>
+    <form method="POST">
+        <!-- Roll Number -->
+        <div class="form-group">
+            <label for="roll_number">Roll Number</label>
+            <input type="number" class="form-control" id="roll_no" name="roll_no" placeholder="Enter roll number" required pattern="[A-Za-z0-9]+">
+        </div>
+
+        <!-- Student Name -->
+        <div class="form-group">
+            <label for="name">Student Name</label>
+            <input type="text" class="form-control" id="name" name="name" required placeholder="Enter Student Name">
+        </div>
+
+
+        <!-- Student Email -->
+        <div class="form-group">
+            <label for="email">Student Email</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="email_username" name="email_username" placeholder="Enter username" required pattern="[a-zA-Z0-9._%+-]+">
+                <div class="input-group-append">
+                    <select class="form-control" id="email_domain" name="email_domain" required>
+                        <option value="@gmail.com">@gmail.com</option>
+                        <option value="@yahoo.com">@yahoo.com</option>
+                        <option value="@gmail.in">@gmail.in</option>
+                        <option value="@yahoo.in">@yahoo.in</option>
+                        <option value="@outlook.com">@outlook.com</option>
+                        <option value="@outlook.in">@outlook.in</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Student Class -->
+        <div class="form-group">
+            <label for="student_class">Student Class</label>
+            <select class="form-control" id="student_class" name="student_class" required>
+                <option value="" disabled selected>Select a class</option>
+                <option value="PGDCA">PGDCA</option>
+                <option value="BCA">BCA</option>
+                <option value="MCA">MCA</option>
+                <option value="MBA">MBA</option>
+            </select>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-success">Add Student</button>
+    </form>
+</div>
+
+<script>
+    // Combine email username and domain before form submission
+    document.querySelector('form').addEventListener('submit', function (event) {
+        const emailUsername = document.getElementById('email_username').value;
+        const emailDomain = document.getElementById('email_domain').value;
+
+        // Create a hidden input for the combined email
+        const emailField = document.createElement('input');
+        emailField.type = 'hidden';
+        emailField.name = 'email';
+        emailField.value = emailUsername + emailDomain;
+
+        // Append the hidden email field to the form
+        this.appendChild(emailField);
+    });
+</script>
+
+</body>
+</html>

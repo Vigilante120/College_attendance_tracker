@@ -1,0 +1,28 @@
+# Environment variables and sensitive config files
+.env
+config.py
+
+# Python cache files
+*.pyc
+*.pyo
+__pycache__/
+
+# Virtual environment directories
+venv/
+env/
+
+# SQLite database (optional)
+*.db
+*.sqlite3
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# macOS and Windows metadata files
+.DS_Store
+Thumbs.db
+
+# Instance folder (Flask-specific)
+instance/

@@ -7,8 +7,13 @@
 <p>Welcome to the admin panel. Here you can manage students, teachers, and classes.</p>
 
     <div class="d-grid gap-2 col-9 mx-auto">
+        <a class="btn btn-primary" href="{{ url_for('take_attendance') }}">Take Attendance</a>
         <a class="btn btn-primary" href="{{ url_for('add_teacher') }}">Add Teacher</a>
         <a class="btn btn-primary" href="{{ url_for('add_student') }}">Add Student</a>
+        <a type="button" class="btn btn-outline-primary" href="{{ url_for('view_students') }}">View Students</a>
+        <a type="button" class="btn btn-outline-primary" href="{{ url_for('view_teachers') }}">View Teachers</a>
+        <a type="button" class="btn btn-outline-primary" href="{{ url_for('view_attendance') }}">View Attendance</a>
+
     </div>
 
 

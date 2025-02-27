@@ -3,32 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View Students</title>
+    <title>Student Table</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-<h1>Student Details</h1>
-<table border="1">
-    <thead>
-    <tr>
-        <th>ID</th>
-        <th>Roll No</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Class</th>
-    </tr>
-    </thead>
-    <tbody>
-    {% for student in students %}
-    <tr>
-        <td>{{ student.id }}</td>
-        <td>{{ student.roll_no }}</td>
-        <td>{{ student.name }}</td>
-        <td>{{ student.email }}</td>
-        <td>{{ student.student_class }}</td>
-    </tr>
-    {% endfor %}
-    </tbody>
-</table>
+<body style="background-color: #f0f8ff;">
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Student List</h2>
+
+    <!-- Responsive Table -->
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+            <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Roll No</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Class</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% if students %}
+            {% for student in students %}
+            <tr>
+                <td>{{ student.id }}</td>
+                <td>{{ student.roll_no }}</td>
+                <td>{{ student.name }}</td>
+                <td>{{ student.email }}</td>
+                <td>{{ student.student_class }}</td>
+            </tr>
+            {% endfor %}
+            {% else %}
+            <!-- Empty State -->
+            <tr>
+                <td colspan="5" class="text-center">No students found.</td>
+            </tr>
+            {% endif %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-

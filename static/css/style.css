@@ -1,7 +1,6 @@
 /* static/css/styles.css */
 body {
-    background-color: #e0f7fa;
-    color: #333;
+    background-color:#9F8383;
 }
 
 header, footer {
@@ -15,3 +14,4 @@ header, footer {
     align-items: center;    /* Center vertically */
     height: 100vh;          /* Full viewport height */
 }
+

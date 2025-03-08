@@ -6,41 +6,131 @@
     <title>{% block title %}College Attendance System{% endblock %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #A6AEBF; /* A very light gray */
+        }
+
+        .header-container {
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .header-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .login-button {
+            background-color: #ffffff;
+            color: #007bff;
+            border: none;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-button:hover {
+            background-color: #e9ecef;
+        }
+
+        .lead {
+            font-size: 1.2rem;
+            color: #343a40;
+        }
+
+        .feature-container {
+            margin-top: 3rem;
+        }
+
+        .feature-box {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-box h3 {
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .feature-box p {
+            color: #6c757d;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 3rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 2rem;
+            }
+
+            .feature-box {
+                padding: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<header class="bg-primary text-white py-3">
-    <!-- Flexbox container for centering title and aligning login button -->
+<header class="header-container">
     <div class="container d-flex justify-content-between align-items-center">
-        <!-- Centered Title -->
-        <h1 class="m-0 text-center flex-grow-1">College Attendance System 📅📍</h1>
-        <!-- Login Button -->
-        <a href="{{ url_for('login') }}" class="btn btn-light btn-sm ml-3">Login</a>
+        <h1 class="header-title m-2">College Attendance System 🏫</h1>
+        <a href="{{ url_for('login') }}" class="btn login-button btn-sm ml-3">Login</a>
     </div>
 </header>
-
 
 <div class="container mt-4">
     {% block content %}{% endblock %}
     <p class="lead">Welcome to the College Attendance System! This platform allows administrators to accurately record and view attendance. Attendance management is restricted to logged-in administrators only, ensuring the integrity and precision of the attendance records. No unauthorized tampering with records is possible.</p>
 </div>
 
-<div class="container overflow-hidden">
-    <div class="row gy-5">
-        <div class="col-6">
-            <div class="p-3 border bg-light">Take Attendance</div>
+<div class="container feature-container">
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <div class="feature-box">
+                <h3>Take Attendance</h3>
+                <p>Efficiently record attendance for all students.</p>
+            </div>
         </div>
-        <div class="col-6">
-            <div class="p-3 border bg-light">View Students</div>
+        <div class="col-md-6 mb-4">
+            <div class="feature-box">
+                <h3>View Students</h3>
+                <p>Access a comprehensive list of all students.</p>
+            </div>
         </div>
-        <div class="col-6">
-            <div class="p-3 border bg-light">View Teachers</div>
+        <div class="col-md-6 mb-4">
+            <div class="feature-box">
+                <h3>View Teachers</h3>
+                <p>Access a comprehensive list of all teachers.</p>
+            </div>
         </div>
-        <div class="col-6">
-            <div class="p-3 border bg-light">View Attendance</div>
+        <div class="col-md-6 mb-4">
+            <div class="feature-box">
+                <h3>View Attendance</h3>
+                <p>Review detailed attendance records and analytics.</p>
+            </div>
         </div>
     </div>
 </div>
-<footer class="bg-dark text-white text-center py-3 mt-4">
+
+<footer class="footer">
     <p>&copy; 2025 College Attendance System. All rights reserved.</p>
     <p>Contact Us On</p>
 </footer>

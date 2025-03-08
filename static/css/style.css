@@ -8,6 +8,7 @@ header, footer {
     color: #fff; /* White text for header and footer */
 }
 
+
 .center-container {
     display: flex;
     justify-content: center; /* Center horizontally */

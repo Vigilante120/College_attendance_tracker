@@ -6,41 +6,53 @@
     <title>{% block title %}College Attendance System{% endblock %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         /* Custom Styles */
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #A6AEBF; /* A very light gray */
+            font-family: 'Nunito', sans-serif;
+            background-color: #f0f8ff; /* A very light blue */
+            color: #333;
         }
 
         .header-container {
-            background: linear-gradient(to right, #007bff, #0056b3);
+            background: linear-gradient(to right, #667eea, #76aee6); /* A softer gradient */
             color: white;
             padding: 2rem 0;
             margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .header-title {
             font-size: 2.5rem;
-            font-weight: bold;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         .login-button {
             background-color: #ffffff;
-            color: #007bff;
+            color: #667eea;
             border: none;
-            border-radius: 5px;
-            padding: 0.5rem 1rem;
-            transition: background-color 0.3s ease;
+            border-radius: 20px;
+            padding: 0.6rem 1.2rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .login-button:hover {
-            background-color: #e9ecef;
+            background-color: #667eea;
+            color: #fff;
         }
 
         .lead {
-            font-size: 1.2rem;
-            color: #343a40;
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 2rem;
         }
 
         .feature-container {
@@ -48,32 +60,38 @@
         }
 
         .feature-box {
-            background-color: #ffffff;
-            border-radius: 10px;
-            padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #eee; /* Light border */
         }
 
         .feature-box:hover {
             transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
 
         .feature-box h3 {
-            color: #007bff;
-            margin-bottom: 1rem;
+            color: #667eea;
+            margin-bottom: 0.8rem;
+            font-size: 1.3rem;
+            font-weight: 700;
         }
 
         .feature-box p {
-            color: #6c757d;
+            color: #777;
+            font-size: 0.95rem;
         }
 
         .footer {
-            background-color: #343a40;
-            color: white;
+            background-color: #e9ecef; /* Light gray footer */
+            color: #555;
             text-align: center;
-            padding: 1rem 0;
+            padding: 1.5rem 0;
             margin-top: 3rem;
+            border-radius: 10px;
         }
 
         /* Responsive Design */
@@ -83,8 +101,21 @@
             }
 
             .feature-box {
-                padding: 1.5rem;
+                padding: 1.2rem;
             }
+        }
+
+        .title-container {
+            display: flex;
+            align-items: center; /* Vertically align the image with the text */
+            margin-bottom: 0.7rem;
+        }
+
+        .feature-image {
+            height: 24px; /* Adjust to match the height of your H3 */
+            width: auto;   /* Maintain aspect ratio */
+            margin-left: 5px; /* Add some space between the text and the image */
+            vertical-align: middle; /* Ensure the image is vertically aligned */
         }
     </style>
 </head>
@@ -105,25 +136,37 @@
     <div class="row">
         <div class="col-md-6 mb-3">
             <div class="feature-box">
-                <h3>Take Attendance</h3>
+                <div class="title-container">
+                    <h3>Take Attendance</h3>
+                    <img src="static/assets/take_attendance.png" alt="Take Attendance" class="feature-image">
+                </div>
                 <p>Efficiently record attendance for all students.</p>
             </div>
         </div>
         <div class="col-md-6 mb-4">
             <div class="feature-box">
-                <h3>View Students</h3>
+                <div class="title-container">
+                    <h3>View Students</h3>
+                    <img src="static/assets/view_students.png" alt="View Students" class="feature-image">
+                </div>
                 <p>Access a comprehensive list of all students.</p>
             </div>
         </div>
         <div class="col-md-6 mb-4">
             <div class="feature-box">
-                <h3>View Teachers</h3>
+                <div class="title-container">
+                    <h3>View Teachers</h3>
+                    <img src="static/assets/view_teachers.png" alt="View Teachers" class="feature-image">
+                </div>
                 <p>Access a comprehensive list of all teachers.</p>
             </div>
         </div>
         <div class="col-md-6 mb-4">
             <div class="feature-box">
-                <h3>View Attendance</h3>
+                <div class="title-container">
+                    <h3>View Attendance</h3>
+                    <img src="static/assets/view_attendance.png" alt="View Attendance" class="feature-image">
+                </div>
                 <p>Review detailed attendance records and analytics.</p>
             </div>
         </div>

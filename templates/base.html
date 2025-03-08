@@ -6,11 +6,70 @@
     <title>{% block title %}College Attendance System{% endblock %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #f0f8ff; /* A very light blue */
+            color: #333;
+        }
+
+        .header-container {
+            background: linear-gradient(to right, #667eea, #76aee6); /* A softer gradient */
+            color: white;
+            padding: 1.5rem 0; /* Reduced padding */
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Softer shadow */
+        }
+
+        .header-title {
+            font-size: 2rem; /* Smaller title */
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Softer shadow */
+        }
+
+        .nav-link {
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #ddd; /* Lighter hover color */
+        }
+
+        .container {
+            max-width: 960px; /* Adjust as needed */
+        }
+
+        .footer {
+            background-color: #e9ecef; /* Light gray footer */
+            color: #555;
+            text-align: center;
+            padding: 1rem 0; /* Reduced padding */
+            margin-top: 2rem; /* Reduced margin */
+            border-radius: 10px;
+            font-size: 0.9rem; /* Smaller font */
+        }
+
+        /* Flash Messages */
+        .alert-info {
+            background-color: #cce5ff;
+            border-color: #b8daff;
+            color: #004085;
+            border-radius: 5px;
+            padding: 0.75rem 1.25rem;
+            margin-bottom: 1rem;
+        }
+    </style>
 </head>
 <body>
-<header class="bg-primary text-white py-3">
+<header class="header-container">
     <div class="container d-flex justify-content-between align-items-center">
-        <h1 class="mb-0">College Attendance System</h1>
+        <h1 class="header-title m-0">College Attendance System 🏫</h1>
         <nav>
             <ul class="nav">
                 <li class="nav-item">
@@ -50,7 +109,7 @@
     {% block content %}{% endblock %}
 </div>
 
-<footer class="bg-dark text-white text-center py-3 mt-4">
+<footer class="footer">
     <p>&copy; 2025 College Attendance System. All rights reserved.</p>
     <p>Contact Us On</p>
 </footer>

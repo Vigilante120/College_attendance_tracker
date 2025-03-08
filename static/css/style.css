@@ -15,3 +15,75 @@ header, footer {
     height: 100vh;          /* Full viewport height */
 }
 
+body {
+    background-color: #f0f8ff; /* Very light blue background */
+}
+
+.container {
+    max-width: 960px; /* Adjust as needed */
+}
+
+.feature-card {
+    border: none; /* Remove the border */
+    background-color: #f8f9fa; /* Light gray background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.feature-card:hover {
+    transform: translateY(-3px); /* Slight lift on hover */
+}
+
+.card-body {
+    padding: 20px; /* Adjust padding as needed */
+}
+
+.card-title {
+    font-size: 1.1rem; /* Smaller title */
+    color: #3498db; /* Blue color for titles */
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    color: #555; /* Darker gray for text */
+    font-size: 0.9rem;
+}
+
+.btn-primary, .btn-outline-primary {
+    border-radius: 5px; /* Less rounded buttons */
+    font-size: 0.85rem;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #3498db; /* Consistent blue */
+    border-color: #3498db;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+
+.btn-outline-primary {
+    color: #3498db;
+    border-color: #3498db;
+}
+
+.btn-outline-primary:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    color: #777;
+    font-size: 0.85rem;
+}

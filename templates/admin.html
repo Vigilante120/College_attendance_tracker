@@ -3,17 +3,83 @@
 {% block title %}Admin - College Attendance System{% endblock %}
 
 {% block content %}
-<h2>Admin Panel</h2>
-<p>Welcome to the admin panel. Here you can manage students, teachers, and classes.</p>
+<div class="container mt-4">
+    <h2>Admin Panel</h2>
+    <p class="lead">Welcome to the admin panel. Here you can manage students, teachers, and classes.</p>
 
-    <div class="d-grid gap-2 col-9 mx-auto">
-        <a class="btn btn-primary" href="{{ url_for('take_attendance') }}">Take Attendance</a>
-        <a class="btn btn-primary" href="{{ url_for('add_teacher') }}">Add Teacher</a>
-        <a class="btn btn-primary" href="{{ url_for('add_student') }}">Add Student</a>
-        <a type="button" class="btn btn-outline-primary" href="{{ url_for('view_students') }}">View Students</a>
-        <a type="button" class="btn btn-outline-primary" href="{{ url_for('view_teachers') }}">View Teachers</a>
-        <a type="button" class="btn btn-outline-primary" href="{{ url_for('view_attendance') }}">View Attendance</a>
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card feature-card">
+                <div class="card-body">
+                    <div class="title-container">
+                        <h5 class="card-title">Take Attendance</h5>
+                    </div>
+                    <p class="card-text">Efficiently record attendance for all students.</p>
+                    <a href="{{ url_for('take_attendance') }}" class="btn btn-primary">Go to Attendance</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card feature-card">
+                <div class="card-body">
+                    <div class="title-container">
+                        <h5 class="card-title">Add Teacher</h5>
+                    </div>
+                    <p class="card-text">Add new teachers to the system.</p>
+                    <a href="{{ url_for('add_teacher') }}" class="btn btn-primary">Add Teacher</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card feature-card">
+                <div class="card-body">
+                    <div class="title-container">
+                        <h5 class="card-title">Add Student</h5>
+                    </div>
+                    <p class="card-text">Register new students to the system.</p>
+                    <a href="{{ url_for('add_student') }}" class="btn btn-primary">Add Student</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card feature-card">
+                <div class="card-body">
+                    <div class="title-container">
+                        <h5 class="card-title">View Students</h5>
+                    </div>
+                    <p class="card-text">Access a comprehensive list of all students.</p>
+                    <a href="{{ url_for('view_students') }}" class="btn btn-outline-primary">View Students</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card feature-card">
+                <div class="card-body">
+                    <div class="title-container">
+                        <h5 class="card-title">View Teachers</h5>
+                    </div>
+                    <p class="card-text">Access a comprehensive list of all teachers.</p>
+                    <a href="{{ url_for('view_teachers') }}" class="btn btn-outline-primary">View Teachers</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card feature-card">
+                <div class="card-body">
+                    <div class="title-container">
+                        <h5 class="card-title">View Attendance</h5>
+                    </div>
+                    <p class="card-text">Review detailed attendance records and analytics.</p>
+                    <a href="{{ url_for('view_attendance') }}" class="btn btn-outline-primary">View Attendance</a>
+                </div>
+            </div>
+        </div>
     </div>
 
-
+</div>
 {% endblock %}

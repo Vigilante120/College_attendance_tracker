@@ -17,8 +17,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DB_URI', 'sqlite:///users.db'
 
 db = SQLAlchemy(app)
 Bootstrap5(app)
-# first a welcome page using index.html > options take attendance button
-# add a login manager
+
 
 login_manager = LoginManager()
 login_manager.init_app(app)
